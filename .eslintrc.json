@@ -1,0 +1,46 @@
+{
+    "env": {
+        "react-native/react-native": true,
+        "browser": true,
+        "es6": true
+    },
+    "extends": "airbnb",
+    "globals": {
+        "Atomics": "readonly",
+        "SharedArrayBuffer": "readonly"
+    },
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": 2018,
+        "sourceType": "module"
+    },
+    "plugins": [
+        "react",
+        "react-native"
+    ],
+    "rules": {
+        "brace-style": ["error", "stroustrup"],
+        "no-unused-expressions": ["error", {"allowShortCircuit": true}],
+        "no-param-reassign": ["error", { "props": false }],
+        "no-mixed-operators": ["error", { "allowSamePrecedence": true }],
+        "jsx-a11y/no-static-element-interactions": "off",
+        "jsx-a11y/href-no-hash": "off",
+        "jsx-a11y/anchor-is-valid": "off",
+        "jsx-a11y/mouse-events-have-key-events": "off",
+        "jsx-a11y/click-events-have-key-events": "off",
+        "jsx-a11y/no-noninteractive-element-interactions": "off",
+        "react/jsx-filename-extension": "off",
+        "react/forbid-prop-types": "off",
+        "react/no-access-state-in-setstate": "warn",
+        "react/jsx-one-expression-per-line": "off",
+        "react/destructuring-assignment": "warn",
+        "react/no-unescaped-entities": "off",
+        "arrow-parens": [2, "as-needed", {"requireForBlockBody": true}],
+        "no-use-before-define": ["error", { "functions": true, "classes": true, "variables": false }], // disable the rule for variables, but enable it for functions and classe
+        "react-native/no-unused-styles": 2, // disallow unused styles
+        "react-native/no-inline-styles": 2 // disallow styles declared within the component itself
+        // "react-native/no-color-literals": 2 // enforces variable names to be used for storing colors
+    }
+}
